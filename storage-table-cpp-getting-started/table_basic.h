@@ -14,16 +14,15 @@
 // places, or events is intended or should be inferred.
 //----------------------------------------------------------------------------------
 
+using namespace azure::storage;
+
 #pragma once
+class table_basic
+{
+public:
+  table_basic();
+  ~table_basic();
 
-#include "targetver.h"
-
-#include <stdio.h>
-#include <tchar.h>
-
-// TODO: reference additional headers your program requires here
-
-#include <ctime>
-#include "was/storage_account.h"
-#include "was/table.h"
+  static void table_operations(cloud_table_client table_client);
+};
 

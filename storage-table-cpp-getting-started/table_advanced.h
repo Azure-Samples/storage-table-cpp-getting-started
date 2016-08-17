@@ -14,7 +14,17 @@
 // places, or events is intended or should be inferred.
 //----------------------------------------------------------------------------------
 
-#include "stdafx.h"
+using namespace azure::storage;
 
-// TODO: reference any additional headers you need in STDAFX.H
-// and not in this file
+#pragma once
+class table_advanced
+{
+public:
+  table_advanced();
+  ~table_advanced();
+
+  static void list_tables(cloud_table_client table_client);
+  static void set_service_properties(cloud_table_client table_client);
+  static void set_table_acl(cloud_table_client table_client);
+};
+
